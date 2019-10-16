@@ -7,6 +7,7 @@ clf.add(Convolution2D(32, (3, 3), input_shape = (64, 64, 3), activation = 'relu'
 clf.add(MaxPooling2D(pool_size = (2, 2)))
 clf.add(Convolution2D(32, (3, 3), activation = 'relu'))
 clf.add(MaxPooling2D(pool_size = (2, 2)))
+clf.add(Flatten())
 clf.add(Dense(units = 128, activation = 'relu'))
 clf.add(Dense(units = 1, activation = 'sigmoid'))
 clf.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
